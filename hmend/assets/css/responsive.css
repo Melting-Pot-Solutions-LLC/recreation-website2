@@ -11,9 +11,6 @@
 .slider-wrapper {
   padding: 100px 0;
 }
-.home-area-right {
-  padding: 112px 0 92px 20px;
-}
 .slider-content h2 {
   font-size: 52px;
   font-weight: 800;
@@ -77,6 +74,9 @@
  
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+.justify-center {
+    display: block;
+}
 .slider-text h2 {
   font-size: 44px;
   line-height: 51px;
@@ -167,7 +167,10 @@
  
 /* small mobile :320px. */
 @media (max-width: 767px) {
-	.offer-wrapper {
+.justify-center {
+    display: block;
+}
+.offer-wrapper {
   background: none!important;
 }
 .footer-icon {
