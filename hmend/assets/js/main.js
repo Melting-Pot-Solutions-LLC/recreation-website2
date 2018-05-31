@@ -5,9 +5,9 @@
   $(window).on('scroll',function() {    
    var scroll = $(window).scrollTop();
    if (scroll < 245) {
-    $("#header-sticky").removeClass("scroll-header");
+    $(".header-sticky").removeClass("scroll-header");
    }else{
-    $("#header-sticky").addClass("scroll-header");
+    $(".header-sticky").addClass("scroll-header");
    }
   });
   

@@ -1080,7 +1080,6 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
   font-size: 36px;
   font-weight: 700;
   line-height: 32px;
-  margin-bottom: 10px;
   text-transform: capitalize;
 }
 .section-info p {
@@ -1658,6 +1657,7 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
   background: #232f39 none repeat scroll 0 0;
   border-radius: 23px;
   transition:.3s;
+    min-height: 235px;
 }
 .pricing-wrapper:hover{background:#38a7d4;}
 .pricing-top {
