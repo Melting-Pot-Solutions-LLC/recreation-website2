@@ -930,7 +930,10 @@
   line-height: 20px;
   margin-bottom: 0;
 }
-.footer-bottom .copyright p{color:#a6a5a5;}
+.footer-bottom-area p, .footer-bottom-area i{color:#fff;}
+.footer-bottom-area ul li {
+    display: inline-block;
+}
 .copyright a {
   color: #fd6600;
 }
