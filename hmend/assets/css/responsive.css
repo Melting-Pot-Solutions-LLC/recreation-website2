@@ -161,6 +161,12 @@
 .mean-container a.meanmenu-reveal {
   margin-top: -56px;
 }
+.service-img-comp {
+    display: none;
+}
+.service-img-mobile {
+    display: block !important;
+}
 
 }
 
@@ -324,6 +330,12 @@
 }
 .home-3 .mean-container a.meanmenu-reveal span {
   background: #fff;
+}
+.service-img-comp {
+    display: none;
+}
+.service-img-mobile {
+    display: block !important;
 }
 }
  

@@ -117,12 +117,13 @@
   color: #ffffff;  
 }
 .gmail {
-  color: #bababa;
+  color: #fff;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .gmail a {
-   color: #bababa; 
+   color: #fff; 
+    font-weight: 400;
 }
 .header-left-icon {
   margin-top: 39px;
@@ -212,10 +213,10 @@
   padding: 30px 0;
 }
 .make-appointment i{
-  color: #38a7d4;  
+  color: #47b749;  
 }
 .make-appointment a {
-  color: #38a7d4;
+  color: #47b749;
   font-size: 14px;
   font-weight: 400;
   margin-left: 9px;
@@ -314,7 +315,7 @@
   line-height: 30px;
 }
 .slider-text > a {
-  background: #38a7d4 none repeat scroll 0 0;
+  background: #47b749 none repeat scroll 0 0;
   border-radius: 7px;
   color: #ffffff;
   display: inline-block;
@@ -513,7 +514,7 @@
   margin-bottom: 0;
 }
 .section-title h4 {
-  color: #38a7d4;
+  color: #47b749;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 9px;
@@ -546,6 +547,7 @@
   margin-top: -33px;
   padding: 0 30px;
   position: relative;
+ min-height: 295px;
 }
 .service-text h2 {
   font-size: 20px;
@@ -567,7 +569,7 @@
   transition:.3s;
 }
 .service-text > a {
-  color: #5f5f5f;
+  color: #47b749;
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
@@ -588,9 +590,13 @@
   width: 100%;
   transition: all 0.5s ease 0s;
 }
-.service-text > a::after{width:0;background:red}
+.service-text > a::after{width:0;background:#47b749}
 .service-text > a:hover:after{width:100%;}
-.service-text > a:hover{color:#38a7d4;border-color:#38a7d4;}
+.service-text > a:hover{color:#47b749;border-color:#47b749;}
+.service-page-text {
+    padding: 0 40px 40px;
+    box-sizing: border-box;
+}
 .service-content {
   padding: 40px 30px;
 }
@@ -642,8 +648,8 @@
   background: #ffffff none repeat scroll 0 0;
   border-radius: 5%;
   box-shadow: 0 8px 21px 0 rgba(0, 0, 0, 0.1);
-  margin-top: 21px;
-  padding-top: 70px;
+  padding: 50px 50px 0;
+  min-height: 350px;
 }
 .testimonial-text.text-center > p {
   color: #5b5b5b;
@@ -904,15 +910,18 @@
 .footer-menu li a:hover{color:#38a7d4;}
 .footer-link{}
 .footer-link li {
-  color: #5b5b5b;
+  color: #47b749;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 14px;
 }
+.footer-link li a, .footer-link li a:hover {
+    color: #47b749;
+}
 .footer-top .footer-link li {color:#d4d4d4;}
 .footer-link li:last-child{margin-bottom:0;}
 .footer-link li i {
-  color: #38a7d4;
+  color: #47b749;
   margin-right: 16px;
   width: 15px;
 }
@@ -1239,7 +1248,7 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
 .contact-3{}
 .contact-wrapper{}
 #contact-form{}
-#contact-form input {
+#contact-form input, #contact-form select {
   color: #707070;
   font-size: 11px;
   font-weight: 400;
@@ -1665,7 +1674,7 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
 }
 .pricing-top h3 {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -1675,7 +1684,7 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
 }
 .pricing-bottom span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 700;
   font-family: montserrat;
 }
