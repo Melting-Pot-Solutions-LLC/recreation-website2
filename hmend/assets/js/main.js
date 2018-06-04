@@ -209,6 +209,9 @@ $('.video-popup').magnificPopup({
   type: 'iframe'
 });
 
-
+/* contact form price */
+$( ".square" ).on('input',function() {
+  $( ".price" ).val($( ".square" ).val()*0.09)
+});
 
 })(jQuery);	

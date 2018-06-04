@@ -30,6 +30,8 @@ $(function() {
 
 			// Clear the form.
 			$('#contact-form input,#contact-form textarea').val('');
+			$('#contact-form .price').val('Your price will appear here');
+            $("#contact-form .service-options [value='no-service']").attr("selected", "selected");
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.

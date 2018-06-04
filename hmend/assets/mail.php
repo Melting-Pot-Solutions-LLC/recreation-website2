@@ -5,11 +5,15 @@
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["name"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $phone = trim($_POST["phone"]);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $square = trim($_POST["square"]);
+        $price = trim($_POST["price"]);
         $message = trim($_POST["message"]);
+        $serviceOption = $_POST['service'];
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($phone)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Please complete the form and try again.";
@@ -18,14 +22,18 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "mdsalim400@gmail.com";
+        $recipient = "sceneryupgrade@yahoo.com";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "New contact from Scenery Upgrade Website";
 
         // Build the email content.
         $email_content = "Name: $name\n";
+        $email_content .= "Phone: $phone\n\n";
         $email_content .= "Email: $email\n\n";
+        $email_content .= "Square: $square\n\n";
+        $email_content .= "Price: $price\n\n";
+        $email_content .= "ServiceOption: $serviceOption\n\n";
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
