@@ -576,7 +576,7 @@ xloading-bar
   vertical-align: top;
 }
 .cd-headline.loading-bar .cd-words-wrapper::after {
-  background: #47b749 none repeat scroll 0 0;
+  background: #38a7d4 none repeat scroll 0 0;
   bottom: 0;
   content: "";
   height: 3px;
@@ -593,7 +593,7 @@ xloading-bar
   transition: width 3s;
 }
 .cd-headline.loading-bar b {
-  color: #47b749;
+  color: #38a7d4;
   opacity: 0;
   top: 0.2em;
   transition: opacity 0.3s ease 0s;
