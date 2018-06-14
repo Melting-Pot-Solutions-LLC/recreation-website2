@@ -169,9 +169,11 @@
     .slider-active .owl-nav div.owl-prev {
         top: 85%;
     }
+    .banner-text {
+        margin-left: 0;
+    }
 }
 
-/* small mobile :320px. */
 
 @media (max-width: 767px) {
     .justify-center {
@@ -197,8 +199,8 @@
         padding-right: 0;
     }
     .slider-text h2 {
-        font-size: 35px;
-        line-height: 41px;
+        font-size: 28px;
+        line-height: 40px;
     }
     .slider-active:hover .owl-nav div {
         left: 0;
@@ -338,5 +340,8 @@
     .slider-active .owl-nav div.owl-next,
     .slider-active .owl-nav div.owl-prev {
         top: 85%;
+    }
+    .banner-text {
+        margin-left: 0;
     }
 }

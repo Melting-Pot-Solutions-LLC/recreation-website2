@@ -408,6 +408,9 @@
 .slider-text-animation a  {
 	animation-delay: 1.5s;
 }
+.banner-text {
+    margin-left: 30px;
+}
 /* home-service-area */
 .home-service-area {
   overflow: hidden;
