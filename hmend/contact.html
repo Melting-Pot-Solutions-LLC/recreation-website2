@@ -36,7 +36,7 @@
 					<div class="row">
 						<div class="col-lg-3 col-md-3 col-sm-3 site-branding col-xs-12">
 							<div class="header-logo">
-								<a href="index.html"><img src="assets/img/logo/logo3.png" alt="logo" /></a>
+								<a href="index.html"><img src="assets/img/logo/logo-main.png" alt="logo" /></a>
 							</div>
 						</div>
 						<div class="col-lg-5 col-md-6 col-sm-9 hidden-xs">
@@ -160,14 +160,6 @@
         </div>
         <!-- contact-3-area-end -->
 
-        <!-- map-area -->
-		<div class="map-area">
-			<div class="container">
-				<div id="map"></div>
-			</div>
-        </div>
-		<!-- map-end -->
-		
 		<footer>
 			<!-- footer-top-area-start -->
 			<div class="footer-top-area gray-bg pt-100 pb-70">
@@ -235,64 +227,6 @@
         <script src="assets/js/jquery.meanmenu.js"></script>
         <script src="assets/js/ajax-mail.js"></script>
         <script src="assets/js/plugins.js"></script>
-        
-        <!-- Google Map js -->
-<!--        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>  -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ97zN_MClQ8BnmJJOCY165S2QEYvbIis"></script>
-              
-		<script>
-           var locations = [
-              ['Main office', 33.987676, -80.990163, 6],
-              ['London Eye', 33.981679, -80.990334, 5],
-              ['Charing Cross', 33.985686, -80.990093, 4],
-              ['Leicester Square', 33.977677, -80.990256, 3],
-              ['Euston Station', 33.989674, -80.990245, 2],
-              ['Kings Cross Station', 33.957671, -80.990273, 1]
-            ];
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 10,
-              center: new google.maps.LatLng(33.987676, -80.990163),
-                styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}],
-
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-
-            var infowindow = new google.maps.InfoWindow();
-
-            var marker, i;
-            var markers = new Array();
-
-            for (i = 0; i < locations.length; i++) {  
-              marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                map: map
-              });
-
-              markers.push(marker);
-
-              google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                return function() {
-                  infowindow.setContent(locations[i][0]);
-                  infowindow.open(map, marker);
-                }
-              })(marker, i));
-            }
-
-            function AutoCenter() {
-              //  Create a new viewpoint bound
-              var bounds = new google.maps.LatLngBounds();
-              //  Go through each...
-              $.each(markers, function (index, marker) {
-              bounds.extend(marker.position);
-              });
-              //  Fit these bounds to the map
-              map.fitBounds(bounds);
-            }
-            AutoCenter();
-
-	</script>
-        
         <script src="assets/js/main.js"></script>
     </body>
 </html>

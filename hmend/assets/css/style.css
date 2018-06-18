@@ -306,9 +306,8 @@
   color: #38a7d4;
   text-decoration: underline;
 }
-.slider-info{}
 .slider-info p {
-  color: #fff;
+  color: #38a7d4;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 0;
@@ -326,6 +325,9 @@
   padding: 17px 24px;
   text-transform: uppercase;
   transition: .3s;
+}
+.owl-nav {
+    display: none;
 }
 .slider-text > a:hover{background:#3f3f3f;}
 .slider-active .owl-nav div {
