@@ -211,7 +211,9 @@ $('.video-popup').magnificPopup({
 
 /* contact form price */
 $( ".square" ).on('input',function() {
-  $( ".price" ).val($( ".square" ).val()*0.09)
+  
+  let priceText = "$ " + ($( ".square" ).val()*0.09);
+  $( ".price" ).val(priceText);
 });
 
 })(jQuery);	
