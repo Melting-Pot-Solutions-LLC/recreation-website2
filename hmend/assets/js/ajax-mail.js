@@ -7,7 +7,7 @@ $(function() {
 	var formMessages = $('.form-message');
 
 	// Set up an event listener for the contact form.
-	$(form).submit(function(e) {
+	$(".send-btn").on("click",function(e) {
 		// Stop the browser from submitting the form.
 		e.preventDefault();
 
@@ -31,6 +31,7 @@ $(function() {
 			// Clear the form.
 			$('#contact-form input,#contact-form textarea').val('');
 			$('#contact-form .price').val('Your price will appear here');
+			$('#contact-form .quote-btn').val('Instant A Quote');
             $("#contact-form .service-options [value='no-service']").attr("selected", "selected");
 		})
 		.fail(function(data) {

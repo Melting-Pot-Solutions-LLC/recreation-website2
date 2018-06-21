@@ -210,10 +210,9 @@ $('.video-popup').magnificPopup({
 });
 
 /* contact form price */
-$( ".square" ).on('input',function() {
-  
-  let priceText = "$ " + ($( ".square" ).val()*0.09);
-  $( ".price" ).val(priceText);
+$( ".quote-btn" ).on('click',function() {
+    let priceText = "$ " + ($( ".square" ).val()*0.09);
+    $( ".price" ).val(priceText);
 });
 
 })(jQuery);	

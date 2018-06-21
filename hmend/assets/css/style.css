@@ -326,7 +326,7 @@
   text-transform: uppercase;
   transition: .3s;
 }
-.owl-nav {
+.slider-area .owl-nav {
     display: none;
 }
 .slider-text > a:hover{background:#3f3f3f;}
@@ -1322,7 +1322,7 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
 }
 .contact-2 #contact-form textarea{border:1px solid #cdcdcd;}
 .contact-3 #contact-form textarea{background:#f9f9f9;}
-#contact-form > button {
+.contact-2 #contact-form .form-btn {
   background: #38a7d4 none repeat scroll 0 0;
   border: medium none;
   color: #ffffff;
@@ -1335,7 +1335,12 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
   padding: 17px 26px;
   text-transform: uppercase;
 }
-
+.contact-2 #contact-form .quote-btn {
+    width: 180px;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
 .contact-left-wrapper {
   padding-left: 50px;
 }
