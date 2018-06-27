@@ -1317,6 +1317,8 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
 
 .contact-form input[type='file'] {
     height: auto;
+    padding-top: 20px;
+    margin-bottom: 0;
 }
 .contact-3 .contact-form input{background:#f9f9f9;}
 .contact-2-text {
