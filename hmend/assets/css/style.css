@@ -1275,8 +1275,8 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
 }
 .contact-3{}
 .contact-wrapper{}
-#contact-form{}
-#contact-form input, #contact-form select {
+.contact-form{}
+.contact-form input, .contact-form select {
   color: #707070;
   font-size: 11px;
   font-weight: 400;
@@ -1286,7 +1286,39 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   width: 100%;
 }
-.contact-3 #contact-form input{background:#f9f9f9;}
+.contact-3 .contact-form .file-input {
+    width: auto;
+    border: none;
+    font-size: 15px;
+}
+/*
+.contact-form .upload {
+	width: 0.1px;
+	opacity: 0;
+    height: 0;
+    margin-bottom: 0; 
+}
+
+.upload + label {
+    background: #38a7d4 none repeat scroll 0 0;
+    border: medium none;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 17px 26px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+*/
+
+.contact-form input[type='file'] {
+    height: auto;
+}
+.contact-3 .contact-form input{background:#f9f9f9;}
 .contact-2-text {
   margin-bottom: 45px;
   margin-left: 15px;
@@ -1317,8 +1349,8 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
   font-weight: 600;
   margin-bottom: 35px;
 }
-.contact-2 #contact-form input{border:1px solid #cdcdcd;}
-#contact-form textarea {
+.contact-2 .contact-form input{border:1px solid #cdcdcd;}
+.contact-form textarea {
   color: #707070;
   padding: 20px;
   text-transform: uppercase;
@@ -1326,9 +1358,9 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
   font-size:11px;
   height:150px
 }
-.contact-2 #contact-form textarea{border:1px solid #cdcdcd;}
-.contact-3 #contact-form textarea{background:#f9f9f9;}
-.contact-2 #contact-form .form-btn {
+.contact-2 .contact-form textarea{border:1px solid #cdcdcd;}
+.contact-3 .contact-form textarea{background:#f9f9f9;}
+.contact-2 .contact-form .form-btn {
   background: #38a7d4 none repeat scroll 0 0;
   border: medium none;
   color: #ffffff;
@@ -1341,7 +1373,7 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
   padding: 17px 26px;
   text-transform: uppercase;
 }
-.contact-2 #contact-form .quote-btn {
+.contact-2 .contact-form .quote-btn {
     width: 180px;
     height: auto;
     margin-top: 0;

@@ -102,7 +102,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="contact-wrapper-3 mb-30">
-                            <form enctype="multipart/form-data" method="post" id="feedback-form" class="contact-form">
+                            <form action="assets/mail.php" id="contact-form" enctype="multipart/form-data" method="post">
                                <div class="contact-3-text section-title mb-30 mt-30">
                                     <h2>Get instant Quote</h2>
                                     <p class="mt-15">Into your home square footage for a low-pressure house wash quote</p>
@@ -114,13 +114,6 @@
                                     <input name="price" class="price" type="text" value="Your price will appear here" readonly>
                                 </div>
                                 <div>
-                                    <input type="file" name="fileFF[]" multiple id="fileFF" class="w100 file-input">
-<!--
-                                    <input type="file" name="fileFF[]" id="file" multiple class="upload" />
-                                    <label for="file">Choose photo</label>
--->
-                                </div>
-                                <div>
                                     <input type="button" class="quote-btn form-btn" value="Instant A Quote">
                                 </div>
                                 
@@ -128,13 +121,13 @@
                                     <h2>Leave Us a Message:</h2>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input name="nameFF" type="text" placeholder="name*" required>
+                                    <input name="name" type="text" placeholder="name*">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input name="phone" type="text" placeholder="phone*" required>
+                                    <input name="phone" type="text" placeholder="phone*">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input name="contactFF" type="email" placeholder="email*" required>
+                                    <input name="email" type="email" placeholder="email*">
                                 </div>
                                 <div class="col-sm-6">
                                     <select name="service" class="service-options">
@@ -155,10 +148,10 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-12">
-                                    <textarea name="messageFF" cols="30" rows="10" placeholder="message" id="message" required></textarea>
+                                    <textarea name="message" cols="30" rows="10" placeholder="message" id="message"></textarea>
                                 </div>								
                                 <div>
-                                    <button type="submit" class="send-btn form-btn" id="submitFF">send message</button>
+                                    <button type="submit" class="send-btn form-btn">send message</button>
                                 </div>
                             </form>
                         </div>
@@ -221,8 +214,7 @@
 			<!-- footer-bottom-area-end -->
 		</footer>
 		<!-- all js here -->
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/headline.js"></script>
         <script src="assets/js/jquery.magnific-popup.min.js"></script>

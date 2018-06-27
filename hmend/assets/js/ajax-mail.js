@@ -1,51 +1,24 @@
-$(function() {
-
-	// Get the form.
-	var form = $('#contact-form');
-
-	// Get the messages div.
-	var formMessages = $('.form-message');
-
-	// Set up an event listener for the contact form.
-	$(".send-btn").on("click",function(e) {
-		// Stop the browser from submitting the form.
-		e.preventDefault();
-
-		// Serialize the form data.
-		var formData = $(form).serialize();
-
-		// Submit the form using AJAX.
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		})
-		.done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-			$(formMessages).removeClass('error');
-			$(formMessages).addClass('success');
-
-			// Set the message text.
-			$(formMessages).text(response);
-
-			// Clear the form.
-			$('#contact-form input,#contact-form textarea').val('');
-			$('#contact-form .price').val('Your price will appear here');
-			$('#contact-form .quote-btn').val('Instant A Quote');
-            $("#contact-form .service-options [value='no-service']").attr("selected", "selected");
-		})
-		.fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('success');
-			$(formMessages).addClass('error');
-
-			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
-			}
-		});
-	});
-
-});
+document.getElementById('feedback-form').addEventListener('submit', function(evt){
+  var http = new XMLHttpRequest(), f = this;
+  evt.preventDefault();
+  http.open("POST", "./assets/mail.php", true);
+  http.onreadystatechange = function() {
+    if (http.readyState == 4 && http.status == 200) {
+      alert(http.responseText);
+      if (http.responseText.indexOf(f.nameFF.value) == 0) { 
+        f.messageFF.removeAttribute('value');
+        f.messageFF.value='';
+      }
+          
+        // Clear the form.
+        $('#contact-form input,#contact-form textarea').val('');
+        $('#contact-form .price').val('Your price will appear here');
+        $('#contact-form .quote-btn').val('Instant A Quote');
+        $("#contact-form .service-options [value='no-service']").attr("selected", "selected");
+    }
+  }
+  http.onerror = function() {
+    alert('Oops! An error occured and your message could not be sent.');
+  }
+  http.send(new FormData(f));
+}, false);

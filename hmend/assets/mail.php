@@ -1,59 +1,64 @@
 <?php
-    // Only process POST reqeusts.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["name"]));
-				$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $phone = trim($_POST["phone"]);
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $square = trim($_POST["square"]);
-        $price = trim($_POST["price"]);
-        $message = trim($_POST["message"]);
-        $serviceOption = $_POST['service'];
+if (isset ($_POST['contactFF'])) {
+    // Get the form fields and remove whitespace.
+    $name = $_POST['nameFF'];
+    $phone = $_POST["phone"];
+    $from = $_POST['contactFF'];
+    $square = $_POST["square"];
+    $price = $_POST["price"];
+    $messageText = $_POST['messageFF'];
+    $serviceOption = $_POST['service'];
+    
+    
+  $to = "sceneryupgrade@yahoo.com"; 
+  $subject = "New contact from Scenery Upgrade Website ".$_SERVER['HTTP_REFERER'];
+    
+    $message = "Name: $name\n\n";
+    $message .= "Phone: $phone\n\n";
+    $message .= "Email: $from\n\n";
+    $message .= "Square: $square\n\n";
+    $message .= "Price: $price\n\n";
+    $message .= "ServiceOption: $serviceOption\n\n";
+    $message .= "Message:\n$messageText\n";
+    
+  $boundary = md5(date('r', time()));
+  $filesize = '';
+  $headers = "MIME-Version: 1.0\r\n";
+  $headers .= "From: " . $from . "\r\n";
+  $headers .= "Reply-To: " . $from . "\r\n";
+  $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
+  $message="
+Content-Type: multipart/mixed; boundary=\"$boundary\"
 
-        
-        // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($phone)) {
-            // Set a 400 (bad request) response code and exit.
-            http_response_code(400);
-            echo "Please complete the form and try again.";
-            exit;
-        }
-        // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "sceneryupgrade@yahoo.com";
-        
-        // Set the email subject.
-        $subject = "New contact from Scenery Upgrade Website";
-        // Build the email content.
-        $email_content = "Name: $name\n";
-        $email_content .= "Phone: $phone\n\n";
-        $email_content .= "Email: $email\n\n";
-        $email_content .= "Square: $square\n\n";
-        $email_content .= "Price: $price\n\n";
-        $email_content .= "ServiceOption: $serviceOption\n\n";
-        $email_content .= "Message:\n$message\n";
-        
-        // Build the email headers.
-        $email_headers = "From: $name <$email>";
+--$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
 
-        // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your message has been sent.";
-        } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
-        }
-    } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
-    }
+$message";
+  for($i=0;$i<count($_FILES['fileFF']['name']);$i++) {
+     if(is_uploaded_file($_FILES['fileFF']['tmp_name'][$i])) {
+         $attachment = chunk_split(base64_encode(file_get_contents($_FILES['fileFF']['tmp_name'][$i])));
+         $filename = $_FILES['fileFF']['name'][$i];
+         $filetype = $_FILES['fileFF']['type'][$i];
+         $filesize += $_FILES['fileFF']['size'][$i];
+         $message.="
+
+--$boundary
+Content-Type: \"$filetype\"; name=\"$filename\"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=\"$filename\"
+
+$attachment";
+     }
+   }
+   $message.="
+--$boundary--";
+
+  if ($filesize < 10000000) { 
+    mail($to, $subject, $message, $headers);
+    echo $_POST['nameFF'].', thank You! Your message has been sent.';
+  } else {
+    echo 'The size of all files exceeds 10 MB.';
+  }
+}
 ?>
-
-
-
-
