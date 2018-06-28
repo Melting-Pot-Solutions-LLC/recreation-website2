@@ -617,12 +617,84 @@
 		<!-- recent-work-area-end -->
 		
 		<!-- map-area -->
+<!--
 		<div class="map-area">
 			<div class="container">
 				<div id="map"></div>
 			</div>
         </div>
+-->
 		<!-- map-end -->
+		<div class="section-title mb-60 text-center">
+            <h4>Territory</h4>
+            <h2>The Territory We Serve</h2>
+        </div>
+		
+		<section class="container-fluid map-section blue-bg pt-70 pb-70">
+		    <div class="container">
+		        <div class="row">
+                    <div class="col-md-6">
+                        <table class="table">
+                            <tbody>
+                              <tr>
+                                <td>Charlotte</td>
+                                <td>Columbia</td>
+                                <td>Rock Hill</td>
+                              </tr>
+                              <tr>
+                                <td>West Columbia</td>
+                                <td>Orangeburg</td>
+                                <td>Lexington</td>
+                              </tr>
+                              <tr>
+                                <td>Fort Mill</td>
+                                <td>Camden</td>
+                                <td>Lugoff</td>
+                              </tr>
+                              <tr>
+                                <td>Pelionl</td>
+                                <td>Leesville</td>
+                                <td>Hopkins</td>
+                              </tr>
+                              <tr>
+                                <td>State Park</td>
+                                <td>Chapin</td>
+                                <td>Ballentine</td>
+                              </tr>
+                              <tr>
+                                <td>Clover</td>
+                                <td>Catawba</td>
+                                <td>Chappells</td>
+                              </tr>
+                              <tr>
+                                <td>York</td>
+                                <td>Newberry</td>
+                                <td>Irmo</td>
+                              </tr>
+                              <tr>
+                                <td>Elgin</td>
+                                <td>Gilbert</td>
+                                <td>Blythewood</td>
+                              </tr>
+                              <tr>
+                                <td>White Rock</td>
+                                <td>Swansea</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="map"></div>
+                    </div>
+		        </div>
+		    </div>
+		</section>
 		
 		<footer>
 			<!-- footer-top-area-start -->
@@ -689,20 +761,17 @@
         <script src="assets/js/jquery.parallax-1.1.3.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/jquery.meanmenu.js"></script>
-        <script src="assets/js/ajax-mail.js"></script>
         <script src="assets/js/plugins.js"></script>
-        
-        <!-- Google Map js -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ97zN_MClQ8BnmJJOCY165S2QEYvbIis"></script>
               
+<!--
 		<script>
            var locations = [
               ['213 S Prospect St, Columbia 29205', 33.987676, -80.990163, 6],
-//              ['London Eye', 33.981679, -80.990334, 5],
-//              ['Charing Cross', 33.985686, -80.990093, 4],
-//              ['Leicester Square', 33.977677, -80.990256, 3],
-//              ['Euston Station', 33.989674, -80.990245, 2],
-//              ['Kings Cross Station', 33.957671, -80.990273, 1]
+              ['London Eye', 33.981679, -80.990334, 5],
+              ['Charing Cross', 33.985686, -80.990093, 4],
+              ['Leicester Square', 33.977677, -80.990256, 3],
+              ['Euston Station', 33.989674, -80.990245, 2],
+              ['Kings Cross Station', 33.957671, -80.990273, 1]
             ];
 
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -747,7 +816,44 @@
             AutoCenter();
 
 	   </script>
+-->
 
+       <script>
+          var citymap = {
+            chicago: {
+              center: {lat: 35.227085, lng: -80.843124},
+              population: 2714856
+            }
+          };
+
+          function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 7,
+              center: {lat: 35.227085, lng: -80.843124},
+              mapTypeId: 'terrain'
+            });
+
+            for (var city in citymap) {
+              // Add the circle for this city to the map.
+              var cityCircle = new google.maps.Circle({
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35,
+                map: map,
+                center: citymap[city].center,
+                radius: Math.sqrt(citymap[city].population) * 100
+              });
+            }
+          }
+        </script>
+                
+        <!-- Google Map js -->
+<!--        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ97zN_MClQ8BnmJJOCY165S2QEYvbIis"></script>-->
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ97zN_MClQ8BnmJJOCY165S2QEYvbIis&callback=initMap"></script>
+        
         <script src="assets/js/main.js"></script>
     </body>
 </html>

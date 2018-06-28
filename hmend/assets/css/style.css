@@ -1790,6 +1790,9 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
 }
 /* map */
 #map{height:400px;width:100%}
+.map-section {
+    color: #fff;
+}
 /* blog-area */
 .blog-post {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
