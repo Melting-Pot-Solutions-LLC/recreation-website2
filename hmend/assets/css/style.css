@@ -1794,6 +1794,9 @@ box-shadow:0 0 13px 0.7px rgba(0, 0, 0, 0.1);
     color: #fff;
 	font-size: 18px;
 }
+.map-section .table>tbody>tr>td {
+    border: none;
+}
 /* blog-area */
 .blog-post {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
