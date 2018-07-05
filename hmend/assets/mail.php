@@ -10,7 +10,7 @@ if (isset ($_POST['contactFF'])) {
     $serviceOption = $_POST['service'];
     
     
-  $to = "sceneryupgrade@yahoo.com"; 
+  $to = "chris@sceneryupgrade.com"; 
   $subject = "New contact from Scenery Upgrade Website ".$_SERVER['HTTP_REFERER'];
     
     $message = "Name: $name\n\n";
