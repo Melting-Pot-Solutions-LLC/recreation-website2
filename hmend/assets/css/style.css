@@ -303,10 +303,10 @@
 .slider-text{}
 .slider-text h2 {
   color: #fff;
-  font-size: 41px;
+  font-size: 43px;
   font-weight: 700;
-  letter-spacing: 4px;
-  line-height: 50px;
+  line-height: 64px;
+    margin-top: 38px;
 }
 .slider-text span {
   color: #38a7d4;
@@ -327,7 +327,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  margin-top: 24px;
+  margin-top: 47px;
   padding: 17px 24px;
   text-transform: uppercase;
   transition: .3s;
