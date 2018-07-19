@@ -307,6 +307,7 @@
   font-weight: 700;
   line-height: 50px;
   margin-top: 230px;
+    text-shadow: 5px 1px 3px #000;
 }
 .slider-text span {
   color: #38a7d4;
