@@ -10,7 +10,7 @@
 
 @media (min-width: 1200px) and (max-width: 1500px) {
     .slider-wrapper {
-        padding: 100px 0;
+        padding: 100px 0 50px;
     }
     .slider-content h2 {
         font-size: 52px;
