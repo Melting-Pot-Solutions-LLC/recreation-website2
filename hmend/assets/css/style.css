@@ -295,12 +295,11 @@
 }
 .main-menu ul li:hover > .sub-menu li > a:hover{color:#fff;background:#38a7d4;}
 /* slider-area */
-.slider-area{}
 .slider-wrapper {
   background-position: center center;
   background-size: cover;
+  padding: 100px 0 50px;
 }
-.slider-text{}
 .slider-text h2 {
   color: #fff;
   font-size: 35px;
