@@ -48,9 +48,11 @@
     .contact-left-wrapper {
         padding-left: 15px;
     }
+/*
     .slider-wrapper {
         padding: 150px 0;
     }
+*/
     .slider-content h2 {
         font-size: 47px;
         line-height: 54px;
@@ -92,9 +94,11 @@
     .site-branding::after {
         display: none;
     }
+/*
     .slider-wrapper {
         padding: 100px 0;
     }
+*/
     .home-area-right {
         padding: 112px 93px 93px 70px;
     }
@@ -198,6 +202,7 @@
     .slider-text h2 {
         font-size: 28px;
         line-height: 40px;
+        margin-top: 10px;
     }
     .slider-active:hover .owl-nav div {
         left: 0;
@@ -213,9 +218,11 @@
         line-height: 50px;
         width: 50px;
     }
+/*
     .slider-wrapper {
         padding: 150px 0;
     }
+*/
     .contact-left-wrapper {
         padding-left: 0;
     }
