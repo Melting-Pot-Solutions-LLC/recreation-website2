@@ -296,16 +296,19 @@
 .main-menu ul li:hover > .sub-menu li > a:hover{color:#fff;background:#38a7d4;}
 /* slider-area */
 .slider-wrapper {
-  background-position: center center;
-  background-size: cover;
-  padding: 0;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
 }
 .slider-text h2 {
   color: #fff;
   font-size: 27px;
   font-weight: 700;
   line-height: 39px;
-  margin-top: 413px;
+  margin-top: 0;
   text-shadow: 5px 1px 3px #000;
 }
 .slider-text span {
@@ -327,7 +330,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 80px;
   padding: 17px 24px;
   text-transform: uppercase;
   transition: .3s;
